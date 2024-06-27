@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<body>
+    <h1>Exercise 4</h1>
+    <p>Check the console for the output</p>
+    <script>
+        function calculate(a,b,operation) {
+            return operation(a,b);
+        }
+        function addition(a,b) {
+            console.log("The sum is ",a+b);
+        }
+        function subtraction(a,b) {
+            console.log(" The difference is ",a-b);
+        }
+        function multiplication(a,b) {
+            console.log("The product is",a*b);
+        }
+        function division(a,b) {
+            console.log("The quotient is",a/b);
+        }
+        
+        calculate(10,5,addition)
+        calculate(10,5,subtraction)
+        calculate(10,5,multiplication)
+        calculate(10,5,division)
+
+        
+
+        const square=calculate.bind(null,6,6,product)
+        square();
+        console.log()
+
+    </script>
+</body>
+</html>
