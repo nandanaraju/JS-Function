@@ -1,0 +1,29 @@
+ul {
+    list-style-type: none;
+    
+}
+
+li {
+    margin: 5px 0;
+    
+}
+
+
+
+.category-Groceries {
+    color:green;
+}
+
+.category-Electronics  {
+    color: blue;
+}
+
+.category-Clothing {
+    color: purple;
+}
+
+.bought {
+    color:gray;
+    text-decoration: line-through;
+    
+}
