@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #other-degree{
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+        
+        <div >
+            <label for="degree">Degree:</label>
+            <label><input type="radio" name="degree" value="Btech"> Btech</label>
+            <label><input type="radio" name="degree" value="Mtech"> Mtech</label>
+            <label><input type="radio" name="degree" value="MCA"> MCA</label>
+            <label><input type="radio" name="degree" value="Others" onclick="showDropdown()"> Others</label>
+        </div>
+        <!-- <div id="other-degree" >
+            <label for="other-degree">Select Degree:</label>
+            <select id="other-degree" name="other-degree">
+                <option value="BCA">BCA</option>
+                <option value="PGDCA">PGDCA</option>
+                <option value="BCom">BCom</option>
+                <option value="MPhil">MPhil</option>
+            </select>
+        </div> -->
+    <script></script>
+</body>
+
+</html>
