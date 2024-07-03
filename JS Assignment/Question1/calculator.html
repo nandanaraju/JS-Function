@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            display: grid;
+            
+            grid-gap: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color:#283747;
+            
+        }
+        .calculator input {
+            grid-column: span 4;
+            height: 50px;
+            text-align: right;
+            font-size: 24px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background:#B9DBA9;
+        }
+        .calculator button {
+            height: 50px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color:#797D7F;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #d0d0d0;
+        }
+        .calculator button.operation {
+            background-color: #55DDDF;
+            color: #fff;
+        }
+        .calculator button.operation:hover {
+            background-color: rgb(59, 187, 222);
+        }
+        .calculator button.equals {
+            
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .calculator button.equals:hover {
+            background-color: #43a047;
+        }
+        .calculator button.clear {
+            /* grid-column: span 2; */
+            background-color: #e53935;
+            color: #fff;
+        }
+        .calculator button.clear:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        
+        
+        
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="operate('divide')" class="operation">/</button>
+        
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="operate('multiply')" class="operation">*</button>
+        
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="operate('subtract')" class="operation">-</button>
+        <button onclick="appendToDisplay('0')" class="zero">0</button>
+
+        <button onclick="calculate()" class="equals">=</button>
+
+        <button onclick="clearDisplay()" class="clear">C</button>
+        <button onclick="operate('add')" class="operation">+</button>
+        
+        
+    </div>
+
+    <script>
+        let currentInput = '';
+        let currentOperation = null;
+        let previousInput = '';
+
+        function appendToDisplay(value) {
+            currentInput += value;
+            updateDisplay(currentInput);
+        }
+
+        function operate(operation) {
+            if (currentInput === '') return;
+            if (previousInput !== '') calculate();
+            previousInput = currentInput;
+            currentInput = '';
+            currentOperation = operation;
+        }
+
+        function calculate() {
+            if (currentInput === '' || previousInput === '') return;
+            let result;
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+
+            switch (currentOperation) {
+                case 'add':
+                    result = prev + current;
+                    break;
+                case 'subtract':
+                    result = prev - current;
+                    break;
+                case 'multiply':
+                    result = prev * current;
+                    break;
+                case 'divide':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            currentInput = result.toString();
+            currentOperation = null;
+            previousInput = '';
+            updateDisplay(currentInput);
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            previousInput = '';
+            currentOperation = null;
+            updateDisplay('');
+        }
+
+        function updateDisplay(value) {
+            document.getElementById('display').value = value;
+        }
+    </script>
+</body>
+</html>

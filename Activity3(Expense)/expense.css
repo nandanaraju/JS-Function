@@ -1,0 +1,25 @@
+ul{
+    list-style-type: none;
+}
+li{
+    margin: 5px 0;
+}
+
+
+.category-Food {
+    color: green;
+}
+
+.category-Transport {
+    color: blue;
+}
+
+.category-Entertainment {
+    color: purple;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}

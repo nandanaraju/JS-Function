@@ -65,4 +65,8 @@ function addItem() {
 
 
     }
+
+    else{
+        alert('Please enter a valid item and a category between 1 and 3');
+    }
 }
