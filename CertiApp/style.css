@@ -1,69 +1,79 @@
-body{
-    background-color: #f2f2f2;
-}
-.du{
-    float: right;
-}
-input.g{
-    background-color:#1492ff;
-    width: 160px;
-    height: 50px;
-    border-radius: 10px;
-    border-style: hidden;
-    text-decoration: none;
-    color: azure;
-    font-size: 20px;
 
-}
-input.h{
-    width: 160px;
-    height: 50px;
-    border-radius: 10px;
-    border-style: hidden;
-    text-decoration: none;
-    font-size: 20px;
-    text-decoration: none;
-}
-div{
-    text-align: center;
-}
-input.cer{
-    width:35%;
-    height: 40px;
-    font-size: 20px;
-}
-input.ho{
-    width: 20%;
-    height: 30px;
-    font-size: 20px;
-}
-select{
-    width:35%;
-    height: 40px;
-    font-size: 20px;
 
-}
-h2{
-    margin-left: 30px;
-}
-h1.r{
-    margin-left:250px;
-}
-div.juju{
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-    border-style:hidden;
-    /* border-color: black; */
-    background-color:#f5f9f8;
-    padding: 15px;
-    width: 80%;
-    height:560px;
-    padding-bottom: 30px;
-    padding-left: 80px;
-}
-p.l{
-    font-size: 33px;
-    font-weight:lighter;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            margin: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+        }
+        
+        nav input[type=button] {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e7e7e7;
+            cursor: pointer;
+        }
+        
+        nav input[type=button]:hover {
+            background-color: #d7d7d7;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        form {
+            width: 40%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+        }
+        
+        label, select, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        select, input[type=text], input[type=date] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #4d9bf9;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #3c82d8;
+        }
+nav{
+    display: flex;
+    gap: 10px;
 }
